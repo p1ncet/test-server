@@ -1,0 +1,33 @@
+{
+	"name": "test-server",
+	"description": "Php simple server for tests",
+	"license": "Creative Commons Attribution No Derivatives 3.0",
+	"homepage": "https://github.com/p1ncet/test-server",
+	"support": {
+		"email": "valery.pudul@gmail.com",
+		"issues": "https://github.com/p1ncet/test-server/issues",
+		"wiki": "https://github.com/p1ncet/test-server/wiki",
+		"source": "https://github.com/p1ncet/test-server/tree/master"
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"authors": [
+		{
+			"name": "Valeriy Pudul",
+			"email": "valery.pudul@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.6"
+	},
+	"require-dev": {
+	},
+	"autoload": {
+		"psr-0": {
+			"TServer": "src"
+		}
+	},
+	"repositories": [
+	]
+}
