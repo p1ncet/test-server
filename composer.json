@@ -1,17 +1,8 @@
 {
-	"name": "testo",
+	"name": "testo/testo",
 	"description": "Simple wrapper over built-in php server for tests",
-	"license": "Creative Commons Attribution No Derivatives 3.0",
-	"homepage": "https://github.com/p1ncet/testo",
-	"support": {
-		"email": "valery.pudul@gmail.com",
-		"issues": "https://github.com/p1ncet/testo/issues",
-		"wiki": "https://github.com/p1ncet/testo/wiki",
-		"source": "https://github.com/p1ncet/testo/tree/master"
-	},
-	"config": {
-		"preferred-install": "dist"
-	},
+	"keywords": ["server", "test"],
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Valeriy Pudul",
