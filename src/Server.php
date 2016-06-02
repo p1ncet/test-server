@@ -23,7 +23,7 @@ class Server {
 		$this->host = $host;
 		$this->port = $port;
 		$cmd = "php -S $host:$port " . realpath(__DIR__ . "/response.php");
-		$this->server = proc_open($cmd, [1 => ["pipe", "/dev/null"]], $this->pipes, __DIR__, ['handler' => $handler]);
+		$this->server = proc_open($cmd, [1 => ["pipe", "w"]], $this->pipes, __DIR__, ['handler' => $handler]);
 
 		$r = false;
 		$max_iteration = 50;
