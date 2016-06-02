@@ -1,6 +1,6 @@
 <?php
 
-namespace TServer;
+namespace Testo;
 
 class SimpleResponse implements Responsible {
 

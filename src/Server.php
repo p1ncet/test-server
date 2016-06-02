@@ -1,6 +1,6 @@
 <?php
 
-namespace TServer;
+namespace Testo;
 
 class Server {
 	
@@ -23,15 +23,17 @@ class Server {
 		$this->host = $host;
 		$this->port = $port;
 		$cmd = "php -S $host:$port " . realpath(__DIR__ . "/response.php");
-		$this->server = proc_open($cmd, [], $this->pipes, __DIR__, ['handler' => $handler]);
+		$this->server = proc_open($cmd, [1 => ["pipe", "/dev/null"]], $this->pipes, __DIR__, ['handler' => $handler]);
 
 		$r = false;
 		$max_iteration = 50;
 		while (--$max_iteration > 0) {
-			usleep(10000);
+			usleep(20000);
 			try {
-				$r = file_get_contents($this->getUrl() . "/test_uri?test_get=value");
-				break;
+				$r = @file_get_contents($this->getUrl());
+				if ($r) {
+					break;
+				}
 			} catch (\Exception $e) {
 				// Server doesn't start yet
 			}

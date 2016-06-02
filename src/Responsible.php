@@ -1,6 +1,6 @@
 <?php
 
-namespace TServer;
+namespace Testo;
 
 interface Responsible {
 	public function response();

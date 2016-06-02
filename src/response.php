@@ -1,6 +1,6 @@
 <?php
 
-namespace TServer;
+namespace Testo;
 
 $path = "/..";
 while (is_dir(__DIR__ . $path) && !is_dir(__DIR__ . "$path/vendor") && strlen($path) < 20) {
