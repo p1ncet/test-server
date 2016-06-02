@@ -1,2 +1,2 @@
-# test-server
+# testo
 Php simple server for tests
