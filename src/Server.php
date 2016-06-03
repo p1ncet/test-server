@@ -44,6 +44,14 @@ class Server {
 		}
 	}
 
+	public function sleep() {
+		proc_terminate($this->server, SIGTSTP);
+	}
+	
+	public function awake() {
+		proc_terminate($this->server, SIGCONT);
+	}
+
 	public function __destruct() {
 		foreach ($this->pipes as $pipe) {
 			fclose($pipe);
